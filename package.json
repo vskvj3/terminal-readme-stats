@@ -1,0 +1,30 @@
+{
+  "name": "terminal-stats",
+  "version": "1.0.0",
+  "description": "terminal like readme for github repo",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vskvj3/terminal-stats.git"
+  },
+  "keywords": [
+    "terminal",
+    "typing",
+    "github", 
+    "readme"
+  ],
+  "author": "vskvj3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vskvj3/terminal-stats/issues"
+  },
+  "homepage": "https://github.com/vskvj3/terminal-stats#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
