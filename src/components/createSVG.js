@@ -1,7 +1,7 @@
 import backgroundTerminal from "./background.js";
 import fontStyle from "./fontStyle.js";
 
-const createSVG = (id)=> {
+const createSVG = (query)=> {
     return(`
     <svg 
     id="terminal" 
@@ -63,7 +63,7 @@ const createSVG = (id)=> {
         x='5%'
         text-anchor='start'>
         <textPath xlink:href='#path1'>
-            ${id}
+            ${query.name}
         </textPath>
     </text>
 

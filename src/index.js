@@ -10,7 +10,7 @@ app.get('/', (req, res)=> {
 
 app.get('/svg/', (req, res)=> {
     res.send(
-        createSVG(req.query.name)
+        createSVG(req.query)
     ); 
 })
 
