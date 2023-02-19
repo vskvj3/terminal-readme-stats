@@ -4,7 +4,7 @@ import fontStyle from "./fontStyle.js";
 import { commandText, responseText } from "./IOcomponents.js";
 
 let stylefont = await fontStyle();
-
+ 
 const createSVG = (query)=> {
     return(`
     <svg 
@@ -17,8 +17,9 @@ const createSVG = (query)=> {
 
     <!--- the terminal background should be here --->
     ${backgroundTerminal()}
+    ${console.log("printing")}
 
-    <!--- font style info should be here --->
+    <!--- font style should be here --->
     ${stylefont}
 
 
@@ -50,6 +51,30 @@ const createSVG = (query)=> {
         text-anchor='start'>
         <textPath xlink:href='#path2'>
             $ stats
+        </textPath>
+    </text>
+
+    <!-- response block 2 -->
+    <path id='path3'>
+        <!-- Multiline -->
+        <animate 
+            id='d1' 
+            attributeName='d' 
+            begin='0s' 
+            dur='4800ms' 
+            fill="freeze"
+            values='m0,110 h0 ; m0,110 h0 ; m0,110 h600 ; m0,110 h600' 
+            keyTimes='0;0.5;0.96875;1' />
+    </path>
+    <text 
+        font-family='"Fira Code", monospace' 
+        fill='#F7F7F7' 
+        font-size='12' 
+        dominant-baseline='auto' 
+        x='5%'
+        text-anchor='start'>
+        <textPath xlink:href='#path3'>
+            get
         </textPath>
     </text>
 
