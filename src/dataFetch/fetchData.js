@@ -10,7 +10,7 @@ const request = async (data, headers) => {
     url: "https://api.github.com/graphql",
     method: "post",
     headers,
-    data,
+    data, 
   });
 };
 
@@ -38,8 +38,8 @@ const fetchTopThreeRepo = (variables, token) => {
   );
 };
 
-const topThreeRepo = async()=> {
-    const res = await fetchTopThreeRepo({login: "ashutosh1919"}, token);
+const topThreeRepo = async(username)=> {
+    const res = await fetchTopThreeRepo({login: username}, token);
     return(res.data.data.user.repositories.nodes);
 }
 

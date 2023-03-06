@@ -6,7 +6,7 @@ dotenv.config()
 // testing
 const token = process.env.TOKEN;
 import topThreeRepo from "./dataFetch/fetchData.js";
-const res = await  topThreeRepo();
+const res = await  topThreeRepo("vskvj3"); 
 
 const app = Express()
 const PORT = process.env.PORT;
