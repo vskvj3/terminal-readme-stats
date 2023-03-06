@@ -1,11 +1,11 @@
 import  Express  from "express";
-import createSVG  from "./components/createSVG.js";
+import createSVG  from "./view/createSVG.js";
 import dotenv from "dotenv";
 dotenv.config()
 
 // testing
 const token = process.env.TOKEN;
-import topThreeRepo from "./dataFetch/fetchData.js";
+import topThreeRepo from "./model/fetchData.js";
 const res = await  topThreeRepo("vskvj3"); 
 
 const app = Express()
