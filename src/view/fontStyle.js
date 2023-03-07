@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const fontStyle = async (Gfamily="Fira Code", weight=700, text="$ whoami abhishek stats")=> {
+const fontStyle = async (Gfamily="Fira Code", weight=700, text="$ whoami vskvj3 stats -> ")=> {
     const BASE_URL = "https://fonts.googleapis.com/css2"
 
     try {

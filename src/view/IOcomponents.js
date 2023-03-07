@@ -1,4 +1,4 @@
-const commandText = (command, xpos, dur, path, prompt = "$")=>{
+const commandText = (command, xpos, dur, path, prompt = "-> ")=>{
     console.log("creating command text")
     return(
     `
