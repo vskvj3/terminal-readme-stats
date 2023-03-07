@@ -22,62 +22,9 @@ const createSVG = (query)=> {
     <!--- font style should be here --->
     ${stylefont}
 
-
-
-    ${commandText("whoami")}
-    ${responseText(query.name)}
-
-
-
-
-    <!-- command block 2 -->
-    <path id='path2'>
-        <!-- Multiline -->
-        <animate 
-            id='d2' 
-            attributeName='d' 
-            begin='0s' 
-            dur='4800ms' 
-            fill="freeze"
-            values='m0,90 h0 ; m0,90 h0 ; m0,90 h600 ; m0,90 h600' 
-            keyTimes='0;0.5;0.96875;1' />
-    </path>
-    <text 
-        font-family='"Fira Code", monospace' 
-        fill='#36BCF7' 
-        font-size='12' 
-        dominant-baseline='auto' 
-        x='5%'
-        text-anchor='start'>
-        <textPath xlink:href='#path2'>
-            $ stats
-        </textPath>
-    </text>
-
-    <!-- response block 2 -->
-    <path id='path3'>
-        <!-- Multiline -->
-        <animate 
-            id='d1' 
-            attributeName='d' 
-            begin='0s' 
-            dur='4800ms' 
-            fill="freeze"
-            values='m0,110 h0 ; m0,110 h0 ; m0,110 h600 ; m0,110 h600' 
-            keyTimes='0;0.5;0.96875;1' />
-    </path>
-    <text 
-        font-family='"Fira Code", monospace' 
-        fill='#F7F7F7' 
-        font-size='12' 
-        dominant-baseline='auto' 
-        x='5%'
-        text-anchor='start'>
-        <textPath xlink:href='#path3'>
-            get
-        </textPath>
-    </text>
-
+    ${commandText("whoami", 50, 1600, 1)}
+    ${responseText(query.name, 70, 3200, 2)}
+    ${commandText("stats", 90, 4800, 3)}
 
 </svg>
     `);

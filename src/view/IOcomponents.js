@@ -1,18 +1,18 @@
-const commandText = (command, prompt = "$")=>{
+const commandText = (command, xpos, dur, path, prompt = "$")=>{
     console.log("creating command text")
     return(
     `
-    <!-- command block 1-->
-    <path id='path0'>
+    <!-- command block ${path}-->
+    <path id='path${path}'>
         <!-- Multiline -->
         <animate 
-            id='d0' 
+            id='d${path}' 
             attributeName='d' 
             begin='0s' 
-            dur='1600ms' 
+            dur='${dur}ms'
             fill="freeze"
-            values='m0,50 h0 ; m0,50 h0 ; m0,50 h600 ; m0,50 h600'
-            keyTimes='0;0;0.9375;1' />
+            values='m0, ${xpos}, h0; m0, ${xpos}, h0; m0, ${xpos}, h600; m0, ${xpos}, h600'
+            keyTimes='0;0.5;0.9375;1' />
     </path>
     <text 
         font-family='"Fira Code", monospace' 
@@ -21,7 +21,7 @@ const commandText = (command, prompt = "$")=>{
         dominant-baseline='auto' 
         x='5%'
         text-anchor='start'>
-        <textPath xlink:href='#path0'>
+        <textPath xlink:href='#path${path}'>
             ${prompt} ${command}
         </textPath>
     </text>
@@ -29,21 +29,21 @@ const commandText = (command, prompt = "$")=>{
     )
 }
 
-const responseText = (name)=> {
+const responseText = (name, xpos, dur, path)=> {
     console.log("creating response text")
-    return(
+    return( 
     `
-    <!-- response block 1 -->
-    <path id='path1'>
+    <!-- response block ${path} -->
+    <path id='path${path}'>
         <!-- Multiline -->
         <animate 
-            id='d1' 
+            id='d${path}' 
             attributeName='d' 
             begin='0s' 
-            dur='3200ms' 
+            dur='${dur}ms' 
             fill="freeze"
-            values='m0,70 h0 ; m0,70 h0 ; m0,70 h600 ; m0,70 h600' 
-            keyTimes='0;0.5;0.96875;1' />
+            values='m0,${xpos}, h0; m0, ${xpos}, h0; m0, ${xpos}, h600; m0, ${xpos}, h600'
+            keyTimes='0;0.5;0.9375;1' />
     </path>
     <text 
         font-family='"Fira Code", monospace' 
@@ -52,7 +52,7 @@ const responseText = (name)=> {
         dominant-baseline='auto' 
         x='5%'
         text-anchor='start'>
-        <textPath xlink:href='#path1'>
+        <textPath xlink:href='#path${path}'>
             ${name}
         </textPath>
     </text>
