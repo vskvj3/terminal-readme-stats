@@ -1,4 +1,4 @@
-const commandText = (command, xpos, dur, path, prompt = "-> ")=>{
+const commandText = (command, xpos, dur, path, prompt = "[cy34@aurora]$ ")=>{
     console.log("creating command text")
     return(
     `
@@ -12,7 +12,7 @@ const commandText = (command, xpos, dur, path, prompt = "-> ")=>{
             dur='${dur}ms'
             fill="freeze"
             values='m0, ${xpos}, h0; m0, ${xpos}, h0; m0, ${xpos}, h600; m0, ${xpos}, h600'
-            keyTimes='0;0.5;0.9375;1' />
+            keyTimes='0;0.5;0.75;1' />
     </path>
     <text 
         font-family='"Fira Code", monospace' 
@@ -43,7 +43,7 @@ const responseText = (name, xpos, dur, path)=> {
             dur='${dur}ms' 
             fill="freeze"
             values='m0,${xpos}, h0; m0, ${xpos}, h0; m0, ${xpos}, h600; m0, ${xpos}, h600'
-            keyTimes='0;0.5;0.9375;1' />
+            keyTimes='0;0.5;0.75;1' />
     </path>
     <text 
         font-family='"Fira Code", monospace' 

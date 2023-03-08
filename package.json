@@ -2,7 +2,7 @@
   "name": "terminal-stats",
   "version": "1.0.0",
   "description": "terminal like readme for github repo",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
