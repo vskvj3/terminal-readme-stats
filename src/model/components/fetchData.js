@@ -47,9 +47,9 @@ const fetchData = async (variables, token) => {
   return request(
     {
       query: `
-            query userInfo($login: String!, $after: String) {
+            query userInfo($login: String!) {
               user(login: $login) {
-                repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}, after: $after) {
+                repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}) {
                   nodes {
                     name
                     stargazers {
@@ -75,3 +75,5 @@ const fetchData = async (variables, token) => {
 const fetchRepo = () => {};
 
 export default topThreeRepo;
+export {request, fetchData}
+
