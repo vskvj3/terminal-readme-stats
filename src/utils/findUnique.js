@@ -11,4 +11,5 @@ const findUnique = (str)=>{
         return str;    
 }
 
-export default findUnique;
+
+export {findUnique};
