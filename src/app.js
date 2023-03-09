@@ -20,6 +20,7 @@ app.get('/', (req, res)=> {
 
 app.get('/svg/', async (req, res)=> {
 
+    res.setHeader("Content-Type", "image/svg+xml");
     res.send(
         await formateRequest(req.query)
     ); 
