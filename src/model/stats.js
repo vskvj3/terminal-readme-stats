@@ -1,6 +1,13 @@
 import { statsFetcher } from "./components/statsfetchers.js";
 import { fetchTotalCommits } from "./components/statsfetchers.js";
 
+
+/***
+* @param String username of the user
+* @param String github authentication token
+* @returns {JSON} github user stats
+*
+****/
 const stats = async (username, token)=> {
     const fetcheddata = await statsFetcher(username, token);
     const user = fetcheddata.data.data.user
