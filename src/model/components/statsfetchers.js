@@ -2,8 +2,6 @@ import { request } from "./fetchData.js";
 import axios from "axios";
 
 
-
-
 const GRAPHQL_REPOS_FIELD = `
   repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}, after: $after) {
     totalCount
