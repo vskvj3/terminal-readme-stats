@@ -1,11 +1,12 @@
-import backgroundTerminal from "./background.js";
-import fontStyle from "./fontStyle.js";
-import buttons from "./buttons.js";
-import { commandText, responseText } from "./IOcomponents.js";
+import backgroundTerminal from "./components/background.js";
+import fontStyle from "./components/fontStyle.js";
+import buttons from "./components/buttons.js";
+import { whoamiSVG } from "./whoamiSVG.js";
+import { statsSVG } from "./statsSVG.js";
 
 let stylefont = await fontStyle();
  
-const createSVG = (query, width, height)=> {
+const createSVG = (query, width, height, whoami, stats)=> {
     return(`
     <svg 
     id="terminal" 
@@ -26,16 +27,8 @@ const createSVG = (query, width, height)=> {
     
     
 
-    ${commandText("whoami", 80, 1600, 1)} 
-    ${responseText(query.name, 100, 3200, 2)} 
-    ${commandText("stats", 120, 4800, 3)}
-    ${responseText("total stars: 1", 140, 5400, 4)} 
-    ${responseText("total pull requests: 1", 160, 7000, 5)} 
-    ${responseText("total commits: 169", 180, 8600, 6)}
-    ${commandText("top-languages", 200, 10200, 7)}
-    ${responseText("java: 58.4%", 220, 11800, 8)} 
-    ${responseText("lua: 43%", 240, 13400, 9)} 
-    ${responseText("javascript: 3%", 260, 15000, 10)}
+    ${whoami}
+    ${stats}
 
 
 </svg>
