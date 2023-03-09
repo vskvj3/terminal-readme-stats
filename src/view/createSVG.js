@@ -4,9 +4,10 @@ import buttons from "./components/buttons.js";
 import { whoamiSVG } from "./whoamiSVG.js";
 import { statsSVG } from "./statsSVG.js";
 
-let stylefont = await fontStyle();
+
  
-const createSVG = (query, width, height, whoami, stats)=> {
+const createSVG = async(query, width, height, whoami, stats, fontdata)=> {
+    let stylefont = await fontStyle(fontdata);
     return(`
     <svg 
     id="terminal" 

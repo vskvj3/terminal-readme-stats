@@ -12,8 +12,9 @@ import { commandText, responseText } from "./components/IOcomponents.js"
 const whoamiSVG = (name, pos, pos_inc, time, time_inc)=>{
     return(`
     ${commandText("whoami", pos, time, 1)} 
-    ${responseText(name, pos+pos_inc, time+time_inc, 2)} 
+    ${responseText(name, pos+pos_inc, parseInt(time)+parseInt(time_inc), 2)} 
     `)
+    
 }
 
 export {whoamiSVG}

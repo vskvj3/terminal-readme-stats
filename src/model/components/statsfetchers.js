@@ -75,6 +75,13 @@ const fetcher = (variables, token) => {
   );
 };
 
+
+/**
+ * fetch formatted data
+ * @param {String} username 
+ * @param {String} token 
+ * @returns {JSON} formatted stats
+ */
 const statsFetcher = async (username, token) => {
     let stats;
     let hasNextPage = true;

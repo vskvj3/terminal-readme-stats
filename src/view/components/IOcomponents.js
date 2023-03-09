@@ -1,5 +1,4 @@
 const commandText = (command, xpos, dur, path, prompt = "[cy34@aurora]$ ")=>{
-    console.log("creating command text")
     return(
     `
     <!-- command block ${path}-->
@@ -30,7 +29,6 @@ const commandText = (command, xpos, dur, path, prompt = "[cy34@aurora]$ ")=>{
 }
 
 const responseText = (name, xpos, dur, path)=> {
-    console.log("creating response text")
     return( 
     `
     <!-- response block ${path} -->
