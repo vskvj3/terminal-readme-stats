@@ -14,7 +14,7 @@ const createSVG = async(query, width, height, whoami, stats, fontdata)=> {
     Xmlns="http://www.w3.org/2000/svg" 
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 ${width} ${height}" 
-    <!--- 640 360 --->
+    
     shape-rendering="geometricPrecision" 
     text-rendering="geometricPrecision">
 
