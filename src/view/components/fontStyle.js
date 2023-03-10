@@ -29,7 +29,7 @@ const fontStyle = async (fontdata, Gfamily="Fira Code", weight=700, text="$ op-l
                 font-family: 'Fira Code';
                 font-style: normal;
                 font-weight: 700;
-                src: url(https://fonts.gstatic.com/l/font?kit=uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_NprFVfpP-aAyFlsQfEipErTlw&skey=33bc0af28fd31bc7&v=v21) format('truetype');
+                src: url(https://fonts.gstatic.com/l/font?kit=uU9eCBsR6Z2vfE9aq3bL0fxyUs4tcw4W_NprFVfpP-aAyFlsQfEipErTlw) format('truetype');
               }`
         )
 
