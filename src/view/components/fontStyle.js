@@ -1,5 +1,6 @@
 import axios from "axios";
 import {findUnique} from "../../utils/findUnique.js";
+import fetch from 'node-fetch';
 
 
 const fontStyle = async (fontdata, Gfamily="Fira Code", weight=700, text="$ op-languageswhoami 69vskvj3 stats -> [cy34@aurora]$ total pull requests: 1 java: 58.4% lua: 43% javascript: 3% total commits: 169")=> {
@@ -9,9 +10,8 @@ const fontStyle = async (fontdata, Gfamily="Fira Code", weight=700, text="$ op-l
     try {
         const resp = await axios.get(`${BASE_URL}?family=${Gfamily}:wght@${weight}&text=${uniqText}`);
         let fontProperties = resp.data
-        
-    
-        //console.log(fontProperties);
+        //let fontCode = await fetchFontContent(findURL(fontProperties));
+        console.log(fontProperties);
 
         return(
             `
@@ -36,5 +36,28 @@ const fontStyle = async (fontdata, Gfamily="Fira Code", weight=700, text="$ op-l
       }
 };
 
+/**
+ * 
+ * @param {String} url
+ * @returns {ttf} ttf file of font
+ */
+const fetchFontContent = async (url )=> {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`unexpected response ${response.statusText}`);
+  const data = await response.toString();
+  const imageURL = URL.createObjectURL(data)
+  return imageURL;
+}
+
+/**
+ * 
+ * @param {String} fontface 
+ * @returns {String} url of the font
+ */
+const findURL = (fontface)=> {
+  const regex = /\((https\:\/\/fonts\.gstatic\.com.+?)\) format\(\'(.*?)\'\)/;
+  const found = fontface.match(regex);
+  return found[1];
+}
 
 export default fontStyle;
