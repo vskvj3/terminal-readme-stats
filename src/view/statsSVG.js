@@ -15,7 +15,7 @@ import { createAP } from "../utils/createAP.js"
 const statsSVG = (stats, pos, pos_inc, time, time_inc)=>{
     const positions = createAP(120, 20, 6)
     const times = createAP(4800, 1600, 6)
-    console.log(stats)
+    //console.log(stats)
 
 
     return (
