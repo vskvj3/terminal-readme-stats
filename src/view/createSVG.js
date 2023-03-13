@@ -10,18 +10,15 @@ const createSVG = async(query, width, height, whoami, stats, fontdata)=> {
     let stylefont = await fontStyle(fontdata);
     return(`
     <svg 
-    id="terminal" 
-    Xmlns="http://www.w3.org/2000/svg" 
-    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
     viewBox="0 0 ${width} ${height}" 
-    
-    shape-rendering="geometricPrecision" 
-    text-rendering="geometricPrecision">
+    width='${width}' height='${height}'>
 
-    <!--- the terminal background should be here --->
+    <!-- the terminal background should be here -->
     ${backgroundTerminal("#4C566A", "#a1a1a1")}
 
-    <!--- font style should be here --->
+    <!-- font style should be here -->
     ${stylefont}
 
     ${buttons('#BF616A', '#EBCB8B', '#A3BE8C', true)}
