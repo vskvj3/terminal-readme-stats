@@ -1,5 +1,6 @@
 import  Express  from "express";
 import dotenv from "dotenv";
+import nocache from "nocache";
 
 import { formateRequest } from "./controllers/formateData.js";
 
@@ -11,6 +12,9 @@ const token = process.env.TOKEN;
 
 
 const app = Express()
+// do not store any cache
+app.use(nocache());
+
 const PORT = process.env.PORT;
 
 
